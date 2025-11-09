@@ -1,17 +1,23 @@
+<!-- templates/kind_update.html -->
 <html>
-    <head></head>
-    <body>
-        This is the update template. 
-        <form action="/kind/update/{{data['id']}}" method="post">
-            <hr/>
-            <p>Kind Name:<input name="name" value="{{data['name']}}"/></p>
-            <p>Food:<input name="food" value="{{data['food']}}"/></p>
-            <p>Sound:<input name="sound" value="{{data['sound']}}"/></p>
-            <hr/>
-            <hr/>
-            <button type="submit">Update</button>
-            <a href="/kind/list">Cancel</a>
-            <hr/>
-        </form>
-    </body>
+  <head></head>
+  <body>
+    <h3>Update Kind</h3>
+
+    <!-- Post back to /kind/update/<id> -->
+    <form method="post" action="">
+      <p>Name:
+        <input name="name" value="{{ kind['name'] }}" />
+      </p>
+      <p>Food:
+        <input name="food" value="{{ kind['food'] }}" />
+      </p>
+      <p>Sound:
+        <input name="sound" value="{{ kind['sound'] }}" />
+      </p>
+
+      <button type="submit">Update</button>
+      <a href="/kind/list">Cancel</a>
+    </form>
+  </body>
 </html>

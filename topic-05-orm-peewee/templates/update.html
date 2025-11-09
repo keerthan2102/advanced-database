@@ -1,17 +1,30 @@
 <html>
-    <head></head>
-    <body>
-        This is the update template. 
-        <form action="/update/{{data['id']}}" method="post">
-            <hr/>
-            <p>Animal Name:<input name="name" value="{{data['name']}}"/></p>
-            <p>Age:<input name="age" value="{{data['age']}}"/></p>
-            <p>Type:<input name="type" value="{{data['type']}}"/></p>
-            <p>Owner:<input name="owner" value="{{data['owner']}}"/></p>
-            <hr/>
-            <button type="submit">Update</button>
-            <a href="/list">Cancel</a>
-            <hr/>
-        </form>
-    </body>
+  <head></head>
+  <body>
+    This is the update template.
+    <!-- Post back to the same URL: /update/<id> -->
+    <form method="post" action="">
+      <hr/>
+      <p>Animal Name:<input name="name" value="{{ pet['name'] }}"/></p>
+      <p>Age:<input name="age" value="{{ pet['age'] }}"/></p>
+
+      <!-- Use a dropdown for kind_id instead of a free-text "type" -->
+      <p>Type:
+        <select name="kind_id">
+          {% for k in kinds %}
+            <option value="{{ k['id'] }}"
+              {% if k['id'] == pet['kind_id'] %}selected{% endif %}>
+              {{ k['name'] }}
+            </option>
+          {% endfor %}
+        </select>
+      </p>
+
+      <p>Owner:<input name="owner" value="{{ pet['owner'] }}"/></p>
+      <hr/>
+      <button type="submit">Update</button>
+      <a href="/list">Cancel</a>
+      <hr/>
+    </form>
+  </body>
 </html>

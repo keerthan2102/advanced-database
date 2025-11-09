@@ -1,14 +1,16 @@
-# app.py  — Topic 05 (Peewee) wired to Topic 04-style templates
+# app.py — Topic 05 (Peewee ORM) wired to Topic 04-style templates
+# Works with templates that expect DICTS (e.g., kind['name']) and with
+# update templates that still reference "data[...]".
 from flask import Flask, render_template, request, redirect, url_for
 from database import initialize, Kind, Pet
 
 app = Flask(__name__)
 
-# Initialize Peewee / SQLite 
+# Initialize Peewee / SQLite (safe to call multiple times)
 initialize("pets.db")
 
 # -------------------------
-# Helpers: model -> dict(s)
+# Helpers: model -> dict
 # -------------------------
 def kind_to_dict(k: Kind):
     return {"id": k.id, "name": k.kind_name, "food": k.food, "sound": k.noise}
@@ -19,10 +21,10 @@ def pet_to_dict(p: Pet):
         "name": p.name,
         "age": p.age,
         "owner": p.owner,
+        "kind_id": p.kind.id if p.kind else None,
         "kind_name": p.kind.kind_name if p.kind else None,
         "food": p.kind.food if p.kind else None,
         "sound": p.kind.noise if p.kind else None,
-        "kind_id": p.kind.id if p.kind else None,
     }
 
 # -------------------------
@@ -62,7 +64,8 @@ def pet_update_form(id: int):
         return redirect(url_for("pet_list"))
     pet = pet_to_dict(p)
     kinds = [kind_to_dict(k) for k in Kind.select().order_by(Kind.id)]
-    return render_template("update.html", pet=pet, kinds=kinds)
+    # Pass both names so legacy templates using either 'pet' or 'data' work
+    return render_template("update.html", pet=pet, data=pet, kinds=kinds)
 
 @app.post("/update/<int:id>")
 def pet_update(id: int):
@@ -82,9 +85,8 @@ def pet_delete(id: int):
 # -------------------------
 # KINDS (parent / reference)
 # -------------------------
-@app.get("/kind")
+@app.get("/kind")  # convenience alias
 def kind_index():
-    # nice alias so /kind works
     return redirect(url_for("kind_list"))
 
 @app.get("/kind/list")
@@ -110,7 +112,9 @@ def kind_update_form(id: int):
     k = Kind.get_or_none(Kind.id == id)
     if not k:
         return redirect(url_for("kind_list"))
-    return render_template("kind_update.html", kind=kind_to_dict(k))
+    kd = kind_to_dict(k)
+    # Pass both names so legacy templates using either 'kind' or 'data' work
+    return render_template("kind_update.html", kind=kd, data=kd)
 
 @app.post("/kind/update/<int:id>")
 def kind_update(id: int):
@@ -123,7 +127,7 @@ def kind_update(id: int):
 
 @app.get("/kind/delete/<int:id>")
 def kind_delete(id: int):
-    # Will raise if pets reference this kind (RESTRICT)
+    # Will raise if pets reference this kind (RESTRICT behavior)
     Kind.get_by_id(id).delete_instance()
     return redirect(url_for("kind_list"))
 

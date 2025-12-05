@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <h2>Pets</h2>
+    <table border="1" cellpadding="6">
+      <tr><th>Name</th><th>Age</th><th>Owner</th><th>Color</th><th>Actions</th></tr>
+      {% for p in pets %}
+      <tr>
+        <td>{{ p.name }}</td>
+        <td>{{ p.age }}</td>
+        <td>{{ p.owner }}</td>
+        <td>{{ p.color or '—' }}</td>
+        <td>
+          <a href="/update/{{ p._id }}">Update</a> |
+          <a href="/delete/{{ p._id }}">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <p><a href="/create">Create New Pet</a></p>
+  </body>
+</html>

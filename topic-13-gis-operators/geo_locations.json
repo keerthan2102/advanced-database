@@ -1,0 +1,392 @@
+[
+  {
+    "name": "Central Park",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9654,
+        40.7829
+      ]
+    }
+  },
+  {
+    "name": "Times Square",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9855,
+        40.758
+      ]
+    }
+  },
+  {
+    "name": "Empire State Building",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9857,
+        40.7484
+      ]
+    }
+  },
+  {
+    "name": "Statue of Liberty",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -74.0445,
+        40.6892
+      ]
+    }
+  },
+  {
+    "name": "Brooklyn Bridge",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9969,
+        40.7061
+      ]
+    }
+  },
+  {
+    "name": "One World Trade Center",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -74.0134,
+        40.7127
+      ]
+    }
+  },
+  {
+    "name": "Grand Central Terminal",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9772,
+        40.7527
+      ]
+    }
+  },
+  {
+    "name": "Yankee Stadium",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9262,
+        40.8296
+      ]
+    }
+  },
+  {
+    "name": "Metropolitan Museum of Art",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9632,
+        40.7794
+      ]
+    }
+  },
+  {
+    "name": "Rockefeller Center",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9787,
+        40.7587
+      ]
+    }
+  },
+  {
+    "name": "Columbia University",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9626,
+        40.8075
+      ]
+    }
+  },
+  {
+    "name": "Bronx Zoo",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.878,
+        40.8506
+      ]
+    }
+  },
+  {
+    "name": "Coney Island",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9819,
+        40.5749
+      ]
+    }
+  },
+  {
+    "name": "New York Public Library",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9819,
+        40.7532
+      ]
+    }
+  },
+  {
+    "name": "Flatiron Building",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9885,
+        40.7411
+      ]
+    }
+  },
+  {
+    "name": "Wall Street",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -74.009,
+        40.7075
+      ]
+    }
+  },
+  {
+    "name": "SoHo",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -74.0007,
+        40.7233
+      ]
+    }
+  },
+  {
+    "name": "Chinatown",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9973,
+        40.7158
+      ]
+    }
+  },
+  {
+    "name": "Little Italy",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.997,
+        40.7191
+      ]
+    }
+  },
+  {
+    "name": "Union Square",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9903,
+        40.7359
+      ]
+    }
+  },
+  {
+    "name": "Madison Square Garden",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9934,
+        40.7505
+      ]
+    }
+  },
+  {
+    "name": "Bryant Park",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9832,
+        40.7536
+      ]
+    }
+  },
+  {
+    "name": "Battery Park",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -74.0168,
+        40.7033
+      ]
+    }
+  },
+  {
+    "name": "Roosevelt Island",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9496,
+        40.7612
+      ]
+    }
+  },
+  {
+    "name": "Queens Museum",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.8469,
+        40.745
+      ]
+    }
+  },
+  {
+    "name": "Flushing Meadows",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.8408,
+        40.7498
+      ]
+    }
+  },
+  {
+    "name": "Prospect Park",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.969,
+        40.6602
+      ]
+    }
+  },
+  {
+    "name": "Barclays Center",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.976,
+        40.6826
+      ]
+    }
+  },
+  {
+    "name": "Apollo Theater",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9496,
+        40.81
+      ]
+    }
+  },
+  {
+    "name": "Lincoln Center",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.985,
+        40.7725
+      ]
+    }
+  },
+  {
+    "name": "St. Patrick's Cathedral",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.975,
+        40.7585
+      ]
+    }
+  },
+  {
+    "name": "MoMA",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9776,
+        40.7614
+      ]
+    }
+  },
+  {
+    "name": "Whitney Museum",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -74.0089,
+        40.7396
+      ]
+    }
+  },
+  {
+    "name": "The High Line",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -74.0048,
+        40.7479
+      ]
+    }
+  },
+  {
+    "name": "Chelsea Market",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -74.0059,
+        40.7424
+      ]
+    }
+  },
+  {
+    "name": "Washington Square Park",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9973,
+        40.7308
+      ]
+    }
+  },
+  {
+    "name": "New York University",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9965,
+        40.7295
+      ]
+    }
+  },
+  {
+    "name": "Fordham University",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.885,
+        40.8616
+      ]
+    }
+  },
+  {
+    "name": "City College of New York",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        -73.9496,
+        40.82
+      ]
+    }
+  }
+]
